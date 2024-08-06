@@ -1,0 +1,19 @@
+name: "container-action"
+description: "Greet someone"
+# author: "octocat@github.com"
+
+# on: "workflow_dispatch":
+    inputs:
+        MY_NAME:
+            description: "Who to greet"
+            required: true
+            default: "World"
+
+
+runs:
+    uses: "docker"
+    image: "Dockerfile"
+
+branding:
+    icon: "mic"
+    color: "purple"
