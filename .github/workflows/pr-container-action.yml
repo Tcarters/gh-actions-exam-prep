@@ -19,6 +19,6 @@ jobs:
             ls -lh ${{ github.workspace }}
         
       - name: Run container action
-        uses: ./01_Automate_developm_tasks_by_using_gh-actions/container-actions
+        uses: ./01_Automate_developm_tasks_by_using_gh-actions/container-action
         with:
           MY_NAME: ${{ github.event.inputs.MY_NAME }}
