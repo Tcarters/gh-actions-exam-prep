@@ -1,4 +1,4 @@
-name: "Container Action Workflow"
+name: "pr-container-action"
 on: 
   workflow_dispatch:
     inputs:
