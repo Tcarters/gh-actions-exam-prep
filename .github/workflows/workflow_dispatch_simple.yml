@@ -10,4 +10,4 @@ jobs:
 
         steps:
             - uses: actions/checkout@v4
-            - uses: ./01_Automate_developm_tasks_by_using_gh-actions/workflow_dispatch/action.yml
+            - uses: ./01_Automate_developm_tasks_by_using_gh-actions/workflow_dispatch
