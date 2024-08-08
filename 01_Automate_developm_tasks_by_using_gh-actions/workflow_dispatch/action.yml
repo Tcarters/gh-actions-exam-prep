@@ -9,18 +9,29 @@ on:
         description: 'Test scenario tags'
 runs:
     using: "composite"
+    outputs: 
+      random_id: ${{ steps.random-number-generator.outputs.random-id }}
     steps:
       - uses: actions/checkout@v4
       
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '14'
+      - name: Generate random number  
+        id: random-number-generator
+        run: echo "random-id=$(echo $RANDOM)" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: RANDOM number was
+        run: | 
+          echo RANDOM NUMBER: ${{ steps.random-number-generator.outputs.random-id }}
+        shell: bash
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '14'
       
-      - name: Install dependencies
-        run: npm install
-        shell: bash
+      # - name: Install dependencies
+      #   run: npm install
+      #   shell: bash
     
-      - name: Run tests
-        run: npm test
-        shell: bash
+      # - name: Run tests
+      #   run: npm test
+      #   shell: bash
