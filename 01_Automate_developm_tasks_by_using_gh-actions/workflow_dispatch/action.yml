@@ -7,10 +7,12 @@ on:
         default: 'warning'
       tags:
         description: 'Test scenario tags'
+outputs: 
+      random_id: ${{ steps.random-number-generator.outputs.random-id }}
+
 runs:
     using: "composite"
-    outputs: 
-      random_id: ${{ steps.random-number-generator.outputs.random-id }}
+   
     steps:
       - uses: actions/checkout@v4
       
