@@ -1,0 +1,13 @@
+name: workflow-dispatch-simple
+# This workflow run manually by execution an action defined in the repo at folder:
+    # 01_Automate_developm_tasks_by_using_gh-actions/workflow_dispatch
+on:
+    workflow_dispatch
+
+jobs:
+    main-job:
+        runs-on: centos-latest
+
+        steps:
+            - uses: actions/checkout@v4
+            - uses: ./01_Automate_developm_tasks_by_using_gh-actions/workflow_dispatch/action.yml
