@@ -6,7 +6,7 @@ on:
 
 jobs:
     main-job:
-        runs-on: centos-latest
+        runs-on: ubuntu
 
         steps:
             - uses: actions/checkout@v4
