@@ -1,3 +1,4 @@
+# This action will be called by a workflow for execution. The action type defined here is a composite.
 on:
   workflow_call:
     inputs:
